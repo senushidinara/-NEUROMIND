@@ -55,6 +55,12 @@
   --text-dark-secondary: #2D1B3D;
   --text-dark-muted: #4A3859;
 
+  /* Additional UI Colors */
+  --success-color: #10b981;
+  --warning-color: #fbbf24;
+  --error-color: #ef4444;
+  --info-color: #4facfe;
+
   /* Border Colors */
   --border-primary: rgba(230, 214, 247, 0.6);
   --border-secondary: rgba(214, 232, 247, 0.6);
