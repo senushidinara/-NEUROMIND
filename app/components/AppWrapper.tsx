@@ -8,7 +8,7 @@ interface AppWrapperProps {
 }
 
 export default function AppWrapper({ children }: AppWrapperProps) {
-  const [showSplash, setShowSplash] = useState(true); // Enabled for full experience
+  const [showSplash, setShowSplash] = useState(false); // Temporarily disabled for debugging
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
