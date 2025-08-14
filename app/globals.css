@@ -51,9 +51,9 @@
   --text-primary: #FFFFFF;
   --text-secondary: #E6D6F7;
   --text-muted: #D6E8F7;
-  --text-dark: #1A0B2E;
-  --text-dark-secondary: #2D1B3D;
-  --text-dark-muted: #4A3859;
+  --text-dark: #2c3e50;
+  --text-dark-secondary: #34495e;
+  --text-dark-muted: #7f8c8d;
 
   /* Additional UI Colors */
   --success-color: #10b981;
@@ -78,10 +78,14 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   color: var(--text-primary);
   overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Main Container */
@@ -109,13 +113,14 @@ body {
   margin-left: 280px;
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   border-radius: 30px;
   margin: 1rem;
   margin-left: 300px;
   box-shadow: 0 20px 60px rgba(230, 214, 247, 0.3);
   color: var(--text-dark);
+  min-height: calc(100vh - 2rem);
 }
 
 /* Button Styles */
