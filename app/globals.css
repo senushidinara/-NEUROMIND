@@ -132,6 +132,13 @@ button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 button:focus-visible {
@@ -1680,11 +1687,25 @@ button:disabled {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 160px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .record-btn.recording {
   background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
   animation: pulse 2s infinite;
+}
+
+.record-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+.record-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .recording-indicator {
