@@ -3860,13 +3860,14 @@ input:checked + .toggle-slider:before {
 }
 
 .nav-section-title {
-  color: #6B5B7B;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  color: #34495e;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   margin-bottom: 1rem;
   padding: 0 0.5rem;
-  text-shadow: 0 1px 3px rgba(107, 91, 123, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
 }
 
 .nav-items {
@@ -4025,10 +4026,11 @@ input:checked + .toggle-slider:before {
 }
 
 .activity-title {
-  color: var(--pastel-green);
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .activity-visualization {
@@ -4067,9 +4069,10 @@ input:checked + .toggle-slider:before {
 }
 
 .status-text {
-  color: var(--text-secondary);
+  color: #34495e;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* Sidebar Footer */
@@ -4116,8 +4119,10 @@ input:checked + .toggle-slider:before {
 }
 
 .connection-text {
-  color: var(--text-secondary);
+  color: #34495e;
   font-size: 0.75rem;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive Design */
