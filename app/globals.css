@@ -128,17 +128,33 @@ button {
   font-family: inherit;
   border: none;
   outline: none;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   position: relative;
   z-index: 1;
-  pointer-events: auto;
+  pointer-events: auto !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+/* Ensure all buttons are clickable */
+button, .btn, .button, [role="button"] {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+/* Fix any potential overlay issues */
+* {
+  box-sizing: border-box;
+}
+
+.main-content * {
+  pointer-events: auto;
 }
 
 button:focus-visible {
