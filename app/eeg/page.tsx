@@ -64,13 +64,37 @@ export default function EEGPage() {
           <div className="section-divider"></div>
           
           <div className="eeg-controls">
-            <button 
+            <button
               onClick={toggleRecording}
               className={`record-btn ${isRecording ? 'recording' : ''}`}
+              style={{
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                minHeight: '50px',
+                boxShadow: isRecording
+                  ? '0 8px 25px rgba(16, 185, 129, 0.4)'
+                  : '0 8px 25px rgba(239, 68, 68, 0.4)',
+                border: '2px solid',
+                borderColor: isRecording ? '#10b981' : '#ef4444'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-3px) scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0) scale(1)';
+              }}
             >
               {isRecording ? '⏹ Stop Recording' : '▶ Start Recording'}
             </button>
             {isRecording && <div className="recording-indicator">🔴 Recording...</div>}
+            <div style={{
+              marginTop: '1rem',
+              fontSize: '0.9rem',
+              color: '#666',
+              fontStyle: 'italic'
+            }}>
+              Click the button above to {isRecording ? 'stop' : 'start'} recording
+            </div>
           </div>
 
           <div className="brainwave-chart">
