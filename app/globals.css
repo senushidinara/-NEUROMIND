@@ -3882,15 +3882,17 @@ input:checked + .toggle-slider:before {
 }
 
 .stat-value {
-  color: #3B82F6;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-shadow: 0 1px 3px rgba(59, 130, 246, 0.3);
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .stat-label {
-  color: var(--text-muted);
-  font-size: 0.7rem;
+  color: #5a6c7d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 /* Navigation */
@@ -4139,14 +4141,17 @@ input:checked + .toggle-slider:before {
 }
 
 .version-label {
-  color: var(--text-muted);
+  color: #5a6c7d;
   font-size: 0.75rem;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .version-number {
-  color: var(--pastel-blue);
-  font-size: 0.75rem;
-  font-weight: 600;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .connection-status {
