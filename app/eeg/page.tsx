@@ -22,7 +22,15 @@ export default function EEGPage() {
   ];
 
   const toggleRecording = () => {
+    console.log('Button clicked! Current recording state:', isRecording);
     setIsRecording(!isRecording);
+
+    // Visual feedback
+    if (!isRecording) {
+      console.log('Starting recording...');
+    } else {
+      console.log('Stopping recording...');
+    }
   };
 
   useEffect(() => {
