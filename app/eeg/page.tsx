@@ -122,6 +122,37 @@ export default function EEGPage() {
           </div>
         </div>
 
+        {/* Test Section */}
+        <div className="section-card">
+          <h2 className="section-title">Button Test</h2>
+          <div className="section-divider"></div>
+          <div style={{ padding: '1rem', textAlign: 'center' }}>
+            <button
+              onClick={() => {
+                console.log('Test button clicked!');
+                setTestClickCount(testClickCount + 1);
+                alert(`Test button clicked ${testClickCount + 1} times!`);
+              }}
+              style={{
+                background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                color: 'white',
+                border: 'none',
+                padding: '1rem 2rem',
+                borderRadius: '15px',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                margin: '1rem'
+              }}
+            >
+              Test Button (Clicked {testClickCount} times)
+            </button>
+            <p style={{ color: '#666', marginTop: '1rem' }}>
+              This is a simple test button to verify click functionality
+            </p>
+          </div>
+        </div>
+
         <div className="section-card">
           <h2 className="section-title">Analysis Summary</h2>
           <div className="section-divider"></div>
