@@ -48,9 +48,12 @@
   --bg-glass-coral: rgba(247, 220, 214, 0.25);
 
   /* Text Colors */
-  --text-primary: #1A0B2E;
-  --text-secondary: #2D1B3D;
-  --text-muted: #4A3859;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E6D6F7;
+  --text-muted: #D6E8F7;
+  --text-dark: #1A0B2E;
+  --text-dark-secondary: #2D1B3D;
+  --text-dark-muted: #4A3859;
 
   /* Border Colors */
   --border-primary: rgba(230, 214, 247, 0.6);
@@ -100,12 +103,46 @@ body {
   margin-left: 280px;
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 30px;
   margin: 1rem;
   margin-left: 300px;
   box-shadow: 0 20px 60px rgba(230, 214, 247, 0.3);
+  color: var(--text-dark);
+}
+
+/* Button Styles */
+.submit-button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(79, 172, 254, 0.4);
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.2);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* Enhanced Background Effects */
