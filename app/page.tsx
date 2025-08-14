@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Sidebar from '../components/Sidebar';
-import EmotionalTagging from '../components/EmotionalTagging';
+import Sidebar from './components/Sidebar';
+import EmotionalTagging from './components/EmotionalTagging';
 
 interface CheckInData {
   mood: number;
