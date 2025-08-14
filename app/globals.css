@@ -4082,7 +4082,7 @@ input:checked + .toggle-slider:before {
   font-size: 0.75rem;
 }
 
-/* Responsive Sidebar */
+/* Responsive Design */
 @media (max-width: 1200px) {
   .sidebar.pastel-sidebar {
     transform: translateX(-100%);
@@ -4091,6 +4091,42 @@ input:checked + .toggle-slider:before {
 
   .sidebar.pastel-sidebar.mobile-open {
     transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.9rem;
   }
 }
 
