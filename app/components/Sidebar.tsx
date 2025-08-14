@@ -132,7 +132,10 @@ export default function Sidebar({ activeItem }: SidebarProps) {
         
         <motion.button
           className="collapse-btn"
-          onClick={() => setIsCollapsed(!isCollapsed)}
+          onClick={() => {
+            console.log('Sidebar collapse button clicked!');
+            setIsCollapsed(!isCollapsed);
+          }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >

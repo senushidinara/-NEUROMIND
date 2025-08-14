@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 
 export default function EEGPage() {
   const [isRecording, setIsRecording] = useState(false);
+  const [testClickCount, setTestClickCount] = useState(0);
   const [currentData, setCurrentData] = useState({
     alpha: 45,
     beta: 32,
@@ -22,7 +23,15 @@ export default function EEGPage() {
   ];
 
   const toggleRecording = () => {
+    console.log('Button clicked! Current recording state:', isRecording);
     setIsRecording(!isRecording);
+
+    // Visual feedback
+    if (!isRecording) {
+      console.log('Starting recording...');
+    } else {
+      console.log('Stopping recording...');
+    }
   };
 
   useEffect(() => {
@@ -56,13 +65,37 @@ export default function EEGPage() {
           <div className="section-divider"></div>
           
           <div className="eeg-controls">
-            <button 
+            <button
               onClick={toggleRecording}
               className={`record-btn ${isRecording ? 'recording' : ''}`}
+              style={{
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                minHeight: '50px',
+                boxShadow: isRecording
+                  ? '0 8px 25px rgba(16, 185, 129, 0.4)'
+                  : '0 8px 25px rgba(239, 68, 68, 0.4)',
+                border: '2px solid',
+                borderColor: isRecording ? '#10b981' : '#ef4444'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-3px) scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0) scale(1)';
+              }}
             >
               {isRecording ? '⏹ Stop Recording' : '▶ Start Recording'}
             </button>
             {isRecording && <div className="recording-indicator">🔴 Recording...</div>}
+            <div style={{
+              marginTop: '1rem',
+              fontSize: '0.9rem',
+              color: '#666',
+              fontStyle: 'italic'
+            }}>
+              Click the button above to {isRecording ? 'stop' : 'start'} recording
+            </div>
           </div>
 
           <div className="brainwave-chart">
@@ -86,6 +119,37 @@ export default function EEGPage() {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Test Section */}
+        <div className="section-card">
+          <h2 className="section-title">Button Test</h2>
+          <div className="section-divider"></div>
+          <div style={{ padding: '1rem', textAlign: 'center' }}>
+            <button
+              onClick={() => {
+                console.log('Test button clicked!');
+                setTestClickCount(testClickCount + 1);
+                alert(`Test button clicked ${testClickCount + 1} times!`);
+              }}
+              style={{
+                background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                color: 'white',
+                border: 'none',
+                padding: '1rem 2rem',
+                borderRadius: '15px',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                margin: '1rem'
+              }}
+            >
+              Test Button (Clicked {testClickCount} times)
+            </button>
+            <p style={{ color: '#666', marginTop: '1rem' }}>
+              This is a simple test button to verify click functionality
+            </p>
           </div>
         </div>
 
