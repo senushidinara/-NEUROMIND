@@ -5,6 +5,7 @@ import Sidebar from '../components/Sidebar';
 
 export default function EEGPage() {
   const [isRecording, setIsRecording] = useState(false);
+  const [testClickCount, setTestClickCount] = useState(0);
   const [currentData, setCurrentData] = useState({
     alpha: 45,
     beta: 32,
