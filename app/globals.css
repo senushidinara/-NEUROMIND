@@ -133,27 +133,32 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
   width: 100%;
   margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .submit-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(79, 172, 254, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(79, 172, 254, 0.5);
   background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
 }
 
 .submit-button:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
   box-shadow: 0 6px 20px rgba(79, 172, 254, 0.2);
 }
 
 .submit-button:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+  pointer-events: none;
 }
 
 /* Check-in Form Styles */
