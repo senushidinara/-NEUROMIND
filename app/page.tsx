@@ -62,8 +62,9 @@ export default function CheckInPage() {
   }, []);
 
   const handleSubmit = async () => {
+    console.log('Submit button clicked! Starting check-in submission...');
     setIsSubmitting(true);
-    
+
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1500));
     
